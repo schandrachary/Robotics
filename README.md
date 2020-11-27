@@ -53,5 +53,5 @@ $ gazebo chakraWorld
 ```
 
 ### Output
-A welcome message is printed on the terminal. You should also see a building model and a robot model loaded inside the Gazebo World. 
-The hello world message and the two-wheeled robot inside a Gazebo World should both launch as follow: 
+A welcome message is printed on the terminal, "Welcome to Chakra's world". You should also see a building model and two instances of robot model loaded inside the Gazebo World. 
+![alt_text](pictures/default_gzclient_camera(1)-2020-11-27T13_55_50.281946.jpg)
