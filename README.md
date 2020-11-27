@@ -10,6 +10,10 @@ Also build a model to house this robot in Building Editor. Include this model in
     |   |-- 4wheelRobot           # Model files of the four-wheeled robot
     |   |   |-- model.config
     |   |   |-- model.sdf
+    |   |-- 4wheelRobot
+    |   |   |-- Chakra-4          # Chakra-4 is the working version that is added to the world
+    |   |   |   |-- model.config
+    |   |   |   |-- model.sdf
     |-- script                    # Chakra World plugin C++ script
     |   |-- welcome_message.cpp
     |-- world                     # Chakra world with condo layout and furniture included
