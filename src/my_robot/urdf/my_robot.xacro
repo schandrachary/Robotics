@@ -38,7 +38,7 @@
       </geometry>
     </visual>
 
-
+<!-- 
     <collision name='back_caster_collision'>
       <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
@@ -65,25 +65,26 @@
       <geometry>
         <sphere radius="0.05"/>
       </geometry>
-    </visual>
+    </visual> -->
 
   </link>
 
 
 
-  <!-- Left wheel -->
-  <link name='left_wheel'>
-    <collision name='left_wheel_collision'>
+  <!-- Front Left wheel -->
+  <link name='front_left_wheel'>
+    <collision name='front_left_wheel_collision'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
 	<cylinder radius="0.1" length="0.05"/>
       </geometry>
     </collision>
 
-    <visual name='left_wheel_visual'>
+    <visual name='front_left_wheel_visual'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
 	<cylinder radius="0.1" length="0.05"/>
+      <material name = "Green"/>
       </geometry>
     </visual>
 
@@ -98,25 +99,63 @@
     </inertial>
   </link>
 
-  <joint type="continuous" name="left_wheel_hinge">
-    <origin xyz="0 0.15 0" rpy="0 0 0"/>
-    <child link="left_wheel"/>
+  <joint type="continuous" name="front_left_wheel_hinge">
+    <origin xyz="0.15 0.15 0" rpy="0 0 0"/>
+    <child link="front_left_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
 
-  <!-- Right wheel -->
-  <link name='right_wheel'>
-    <collision name='right_wheel_collision'>
+    <!-- Front Right wheel -->
+  <link name='front_right_wheel'>
+    <collision name='front_right_wheel_collision'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
 	<cylinder radius="0.1" length="0.05"/>
       </geometry>
     </collision>
 
-    <visual name='right_wheel_visual'>
+    <visual name='front_right_wheel_visual'>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+	<cylinder radius="0.1" length="0.05"/>
+  <material name = "Green"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <mass value="5"/>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <inertia
+          ixx="0.1" ixy="0" ixz="0"
+          iyy="0.1" iyz="0"
+          izz="0.1"
+      />
+    </inertial>
+  </link>
+
+  <joint type="continuous" name="front_right_wheel_hinge">
+    <origin xyz="0.15 -0.15 0" rpy="0 0 0"/>
+    <child link="front_right_wheel"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+    <limit effort="10000" velocity="1000"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+
+<!-- Rear Left wheel -->
+  <link name='rear_left_wheel'>
+    <collision name='rear_left_wheel_collision'>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+	<cylinder radius="0.1" length="0.05"/>
+  <material name = "Green"/>
+      </geometry>
+    </collision>
+
+    <visual name='rear_left_wheel_visual'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
 	<cylinder radius="0.1" length="0.05"/>
@@ -134,9 +173,46 @@
     </inertial>
   </link>
 
-  <joint type="continuous" name="right_wheel_hinge">
-    <origin xyz="0 -0.15 0" rpy="0 0 0"/>
-    <child link="right_wheel"/>
+  <joint type="continuous" name="rear_left_wheel_hinge">
+    <origin xyz="-0.15 0.15 0" rpy="0 0 0"/>
+    <child link="rear_left_wheel"/>
+    <parent link="chassis"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+    <limit effort="10000" velocity="1000"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+
+  <!-- Rear Right wheel -->
+  <link name='rear_right_wheel'>
+    <collision name='rear_right_wheel_collision'>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+	<cylinder radius="0.1" length="0.05"/>
+      </geometry>
+    </collision>
+
+    <visual name='rear_right_wheel_visual'>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <geometry>
+	<cylinder radius="0.1" length="0.05"/>
+  <material name = "Green"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <mass value="5"/>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
+      <inertia
+          ixx="0.1" ixy="0" ixz="0"
+          iyy="0.1" iyz="0"
+          izz="0.1"
+      />
+    </inertial>
+  </link>
+
+  <joint type="continuous" name="rear_right_wheel_hinge">
+    <origin xyz="-0.15 -0.15 0" rpy="0 0 0"/>
+    <child link="rear_right_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
@@ -214,12 +290,12 @@
 
 
   <!-- Material -->
-  <gazebo reference="left_wheel">
+  <!-- <gazebo reference="left_wheel">
     <material>Gazebo/Green</material>
   </gazebo>
   <gazebo reference="right_wheel">
     <material>Gazebo/Green</material>
-  </gazebo>
+  </gazebo> -->
   <gazebo reference="chassis">
     <material>Gazebo/Blue</material>
   </gazebo>
