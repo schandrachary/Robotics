@@ -58,12 +58,12 @@ void process_image_callback(const sensor_msgs::Image img)
     if(x_position_mean> 0 && x_position_mean < img.width / 3)
     {
       ball_position = Location_e::LEFT;
-      //ROS_INFO("Left turn detected");
+      ROS_INFO("Left turn detected");
     }
     else if(x_position_mean > img.width * 2/3)
     {
       ball_position = Location_e::RIGHT; 
-      //ROS_INFO("Right turn detected");
+      ROS_INFO("Right turn detected");
     }
     else
     {
