@@ -71,7 +71,7 @@ void process_image_callback(const sensor_msgs::Image img)
     }
 
     // Stop the robot if the ball doesn't exist in its FOV or it's too close
-    if(ball_position == Location_e::NONE || num_white_pixel < 10 || num_white_pixel > 15000)
+    if(ball_position == Location_e::NONE || num_white_pixel < 10 || num_white_pixel > 50000)
     {
        drive_robot(0.0, 0.0);
     }
