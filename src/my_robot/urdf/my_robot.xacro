@@ -37,39 +37,7 @@
         <box size=".4 .2 .1"/>
       </geometry>
     </visual>
-
-<!-- 
-    <collision name='back_caster_collision'>
-      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
-      <geometry>
-        <sphere radius="0.0499"/>
-      </geometry>
-    </collision>
-
-    <visual name='back_caster_visual'>
-      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
-      <geometry>
-        <sphere radius="0.05"/>
-      </geometry>
-    </visual>
-
-    <collision name='front_caster_collision'>
-      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
-      <geometry>
-        <sphere radius="0.0499"/>
-      </geometry>
-    </collision>
-
-    <visual name='front_caster_visual'>
-      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
-      <geometry>
-        <sphere radius="0.05"/>
-      </geometry>
-    </visual> -->
-
   </link>
-
-
 
   <!-- Front Left wheel -->
   <link name='front_left_wheel'>
@@ -83,8 +51,7 @@
     <visual name='front_left_wheel_visual'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
-	<cylinder radius="0.1" length="0.05"/>
-      <material name = "Green"/>
+	<cylinder radius="0.1" length="0.05"/>      
       </geometry>
     </visual>
 
@@ -105,7 +72,7 @@
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
-    <dynamics damping="1.0" friction="1.0"/>
+    <dynamics damping="1.0" friction="0.5"/>
   </joint>
 
     <!-- Front Right wheel -->
@@ -120,8 +87,7 @@
     <visual name='front_right_wheel_visual'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
-	<cylinder radius="0.1" length="0.05"/>
-  <material name = "Green"/>
+	<cylinder radius="0.1" length="0.05"/>  
       </geometry>
     </visual>
 
@@ -142,7 +108,7 @@
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
-    <dynamics damping="1.0" friction="1.0"/>
+    <dynamics damping="1.0" friction="0.5"/>
   </joint>
 
 <!-- Rear Left wheel -->
@@ -150,8 +116,7 @@
     <collision name='rear_left_wheel_collision'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
-	<cylinder radius="0.1" length="0.05"/>
-  <material name = "Green"/>
+	<cylinder radius="0.1" length="0.05"/>  
       </geometry>
     </collision>
 
@@ -179,7 +144,7 @@
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
-    <dynamics damping="1.0" friction="1.0"/>
+    <dynamics damping="1.0" friction="0.5"/>
   </joint>
 
   <!-- Rear Right wheel -->
@@ -194,8 +159,7 @@
     <visual name='rear_right_wheel_visual'>
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
-	<cylinder radius="0.1" length="0.05"/>
-  <material name = "Green"/>
+	<cylinder radius="0.1" length="0.05"/>  
       </geometry>
     </visual>
 
@@ -216,7 +180,7 @@
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
-    <dynamics damping="1.0" friction="1.0"/>
+    <dynamics damping="1.0" friction="0.5"/>
   </joint>
 
 
@@ -290,17 +254,24 @@
 
 
   <!-- Material -->
-  <!-- <gazebo reference="left_wheel">
-    <material>Gazebo/Green</material>
+  <gazebo reference="front_left_wheel_visual">
+    <material>Gazebo/Grey</material>
   </gazebo>
-  <gazebo reference="right_wheel">
-    <material>Gazebo/Green</material>
-  </gazebo> -->
+  <gazebo reference="front_right_wheel_visual">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+    <gazebo reference="rear_left_wheel_visual">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="rear_right_wheel_visual">
+    <material>Gazebo/Grey</material>
+  </gazebo>
   <gazebo reference="chassis">
-    <material>Gazebo/Blue</material>
-  </gazebo>
-  <gazebo reference="camera">
     <material>Gazebo/Red</material>
   </gazebo>
+  <gazebo reference="camera">
+    <material>Gazebo/DarkYellow</material>
+  </gazebo>
+
 </robot>
 
