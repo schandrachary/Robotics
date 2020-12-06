@@ -186,6 +186,12 @@ $ roslaunch my_robot world.launch
 ```
 This should launch the gazebo and RViz window. The launch file is configured to load the RViz, so you should be able to see all the signals when it's loaded. RViz will load the map, position the robot in the map at its initial pose (0,0,-1.5707). Gazebo will load the world and the robot model. Make sure the Lidar returns correctly match the map. 
 
+![alt_text](./images/initial.png)
+
+
+Here's a closer look for Lidar returns:
+![alt_text](./images/initial-closer.png)
+
 In a new terminal, launch the `amcl` launch file:
 ```
 $ roslaunch my_robot amcl.launch
