@@ -1,5 +1,5 @@
 # Where am I?
-In this project, I use the robot and world model that was created in [Go Chase it](https://github.com/schandrachary/Robotics/tree/go_chase_it) project. There is no need to chase a ball here, so I removed the `ball_chaser` node. 
+In this project, I use the robot and world model that was created in [Go Chase it](https://github.com/schandrachary/Robotics/tree/go_chase_it) project. There is no need to chase a ball here, so I removed the `ball_chaser` node. Below is an animation showing how quickly particles recover upon kidnapping. 
 
 ![alt_text](https://github.com/schandrachary/Robotics/blob/where_am_i/images/teleport.gif)
 
