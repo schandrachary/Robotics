@@ -12,12 +12,16 @@ In this project, I use RTAB-Map (Real-Time Appearance-Based Mapping) package fro
 
 ### Launch Instructions
 
-1. Clone the repo inside of `catkin_ws` directory and initialize catkin workspace:
+1. Note that the [database file](https://github.com/schandrachary/Robotics/blob/map_my_world/rtabmap-chakraworld.db) is uploaded as a git LFS(Large File Storage) since the size of the file is 349 MB. To pull this file you will also need to install LFS. Then, clone the repo and build:
 ```
 $ mkdir catkin_ws && cd catkin_ws
+$ git lfs install
 $ git clone https://github.com/schandrachary/Robotics/tree/map_my_world.git
+$ git lfs pull
 $ catkin_make
 ```
+Alternatively, if you don't want to install git LFS, you can download the [database file](https://github.com/schandrachary/Robotics/blob/map_my_world/rtabmap-    chakraworld.db) using the download button and replace the existing pointer file in the cloned directory.
+
 2. Launch Gazebo world and RViz, spawn the robot in the environment:
 ```
 $ source devel/setup.bash
