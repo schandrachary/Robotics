@@ -20,7 +20,7 @@ $ git clone https://github.com/schandrachary/Robotics/tree/map_my_world.git
 $ git lfs pull
 $ catkin_make
 ```
-Alternatively, if you don't want to install git LFS, you can download the [database file](https://github.com/schandrachary/Robotics/blob/map_my_world/rtabmap-    chakraworld.db) using the download button and replace the existing pointer file in the cloned directory.
+Alternatively, if you don't want to install git LFS, you can download the [database file](https://github.com/schandrachary/Robotics/blob/map_my_world/rtabmap-chakraworld.db) using the download button and replace the existing pointer file in the cloned directory.
 
 2. Launch Gazebo world and RViz, spawn the robot in the environment:
 ```
