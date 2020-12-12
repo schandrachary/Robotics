@@ -1,9 +1,8 @@
 # Map My World!
 
-In this project, I use RTAB-Map (Real-Time Appearance-Based Mapping) package from ROS to create a 2D occupancy grid and 3D octomap from the simulated environment in Gazebo. RTAB-Map is a popular solution for SLAM to develop robots that can map environments in 3D. RTAB-Map has good speed and memory management, and it provides custom developed tools for information analysis. This package is a ROS wrapper of RTAB-Map, a RGB-D SLAM approach based on global loop closure detector with real-time constraints. Below is an animation showing 2D occupancy grid and 3D octomap being generated in real-time as the robot traverses in its environment. 
+In this project, I use RTAB-Map (Real-Time Appearance-Based Mapping) package from ROS to create a 2D occupancy grid and 3D octomap from the simulated environment in Gazebo. RTAB-Map is a popular solution for SLAM to develop robots that can map environments in 3D. RTAB-Map has good speed and memory management, and it provides custom developed tools for information analysis. This package is a ROS wrapper of RTAB-Map, a RGB-D SLAM approach based on global loop closure detector with real-time constraints. Below is a video showing 2D occupancy grid and 3D octomap being generated in real-time as the robot traverses in its environment. 
 
-![alt_text](https://github.com/schandrachary/Robotics/blob/map_my_world/images/rtabmap.gif)
-
+[![IMAGE ALT TEXT HERE](/images/thumbnail.png)](https://www.youtube.com/watch?v=oEtwfcT3_wQ&feature=youtu.be)
 
 ### Prerequisites
 
@@ -43,6 +42,8 @@ After launching all the nodes, executing `rqt_graph` should produce a graph with
 
 
 ### Mapping
+
+![alt_text](https://github.com/schandrachary/Robotics/blob/map_my_world/images/rtabmap.gif)
 
 Navigating the robot in the environment creates a map that will be stored in `/home/workspace/catkin_ws/src` as a database file. Kill the mapping node and launch
 `rtabmap-databaseviewer`
