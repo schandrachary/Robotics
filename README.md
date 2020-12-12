@@ -49,6 +49,10 @@ Navigating the robot in the environment creates a map that will be stored in `/h
 ```
 $ rtabmap-databaseviewer /home/workspace/catkin_ws/src/rtabmap.db
 ```
+or you could load the included database file from this branch:
+```
+$ rtabmap-databaseviewer /home/workspace/catkin_ws/src/rtabmap-chakraworld.db
+```
 - Choose view->Constraint View
 - Choose view-> Graph View
 
