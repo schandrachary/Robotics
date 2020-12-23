@@ -3,7 +3,6 @@
 #include <actionlib/client/simple_action_client.h>
 #include <std_msgs/UInt8.h>
 
-
 struct pose
 {
   float x;
@@ -37,7 +36,6 @@ bool setNewGoal(MoveBaseClient& ac, const float& x, const float& y, const float&
     ac.sendGoal(goal);
 
     return true;
-
 }
 
 enum RobotLocation
