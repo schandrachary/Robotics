@@ -36,10 +36,12 @@
 
     <!-- Odometry parameters -->
     <param name="odom_model_type" value="diff-corrected"/>
-    <param name="odom_alpha1" value="0.05"/>	
-    <param name="odom_alpha2" value="0.05"/>
-    <param name="odom_alpha3" value="0.05"/>
-    <param name="odom_alpha4" value="0.05"/>
+    <param name="odom_alpha1" value="0.0005"/>	
+    <param name="odom_alpha2" value="0.0005"/>
+    <param name="odom_alpha3" value="0.0005"/>
+    <param name="odom_alpha4" value="0.0005"/>    
+    <param name="recovery_alpha_slow" value="0.001"/>
+    <param name="recovery_alpha_fast" value="0.2"/>
 
 
   </node>
