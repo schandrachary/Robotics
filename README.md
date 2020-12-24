@@ -1,4 +1,4 @@
-# Home Serive Robot
+# Home Service Robot
 ---
 
 [![Watch the video](images/thumbnail.png)](https://www.youtube.com/watch?v=49-nGFDpmLw&feature=youtu.be)
@@ -50,6 +50,35 @@ src
     └──
 
 ```
+### Prerequisites
+
+1. ROS-Kinetic, Gazebo on Linux
+2. CMake and g++
+3. Install `rtabmap-ros` package: `$ sudo apt-get install ros-kinetic-rtabmap-ros`
+
+
+### Launch Instructions
+
+1. Note that the [database file](https://github.com/schandrachary/Robotics/blob/map_my_world/rtabmap-chakraworld.db) is uploaded as a git LFS(Large File Storage) since the size of the file is 349 MB. To pull this file you will also need to install LFS. Then, clone the repo and build:
+```
+$ mkdir catkin_ws && cd catkin_ws
+$ git clone https://github.com/schandrachary/Robotics.git
+$ checkout -b home_service_robot origin/home_service_robot
+$ catkin_make
+```
+Install dependencies: 
+```
+$ rosdep -i install turtlebot_teleop -y
+$ rosdep -i install turtlebot_rviz_launchers -y
+$ rosdep -i install turtlebot_gazebo -y
+```
+
+At last, launch the `home_service.sh` script
+```
+$ cd src/scripts
+$ ./home_service.sh
+```
+This should launch all the necessary nodes for the robot to navigate to pick up location, pickup the package, and navigate to drop off location and drop off the package. 
 
 ### SLAM Testing
 To test SLAM, I created a [test_slam.sh](https://github.com/schandrachary/Robotics/blob/home_service_robot/src/scripts/test_slam.sh) script which launches necesssary nodes to load the robot and the world. This script also launches rviz to visualize the map created from RTABMap. Using teleop node, I used keyboard commands to navigate the robot around the enviroment to create a map of the world. I later used the `map_server` package to save the map in `.pgm` format and it can be found [here](https://github.com/schandrachary/Robotics/tree/home_service_robot/src/my_robot/maps).
