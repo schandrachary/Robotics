@@ -1,6 +1,7 @@
 # Home Serive Robot
 ---
 
+[![Watch the video](images/thumbnail.png)](https://www.youtube.com/watch?v=49-nGFDpmLw&feature=youtu.be)
 
 The goal of this project is to program a robot that can take the map generated earlier, localize itself in that map, and navigate the robot to pick up and drop off virtual objects in the simulation. Click on the video above to look at a demonstration. Here is a list of steps undertaken to accomplish that goal:
  - Build a simulated world in Gazebo building editor. In my case, I used the previously built world from previous projects.
