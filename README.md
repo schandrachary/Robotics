@@ -16,7 +16,8 @@ In this project, I use RTAB-Map (Real-Time Appearance-Based Mapping) package fro
 ```
 $ mkdir catkin_ws && cd catkin_ws
 $ git lfs install
-$ git clone https://github.com/schandrachary/Robotics/tree/map_my_world.git
+$ git clone https://github.com/schandrachary/Robotics.git
+$ git checkout -b map_my_world origin/map_my_world
 $ git lfs pull
 $ catkin_make
 ```
