@@ -91,10 +91,10 @@ Now it’s time to simulate a full home service robot capable of navigating to p
 
 Run [home_service.sh](https://github.com/schandrachary/Robotics/blob/home_service_robot/src/scripts/home_service.sh) script and notice the following behavior in RViz:
 
--Marker appears at the pickup zone
--Marker disappears once the robot reaches the pickup zone, indicating the package has been picked up
--Waits 5 seconds to simulate a pickup
--Marker appears at the drop off zone indicating the package has been dropped off
+- Marker appears at the pickup zone
+- Marker disappears once the robot reaches the pickup zone, indicating the package has been picked up
+- Waits 5 seconds to simulate a pickup
+- Marker appears at the drop off zone indicating the package has been dropped off
 
 ![home_service_reducedframe](https://user-images.githubusercontent.com/8539470/103044061-15794700-454d-11eb-8b26-dfb08c35c28d.gif)
 
