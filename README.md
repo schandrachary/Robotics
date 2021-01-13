@@ -1,2 +1,11 @@
 # Robotics
-This repo contains all the projects from Robotics Software Engineer nano degree program from Udacity
+This repo containts various projects that ultimately leads up to [Home Serive Robot](https://github.com/schandrachary/Robotics/tree/home_service_robot). All of these projects are located in appropriately named branches. I call my robot Chakra. Consequently the model I have built to house my robot, is called chakra-world. This model is developed using Gazebo. These would be recommeneded steps to go through if want to understand how to build a robot in a simulated enviroment. 
+
+1. [Build My World](https://github.com/schandrachary/Robotics/tree/robot_world) uses Gazebo to build a robot model as well as a model of the environment where the robot is going to live in, the chakraWorld.
+2. [EKF](https://github.com/schandrachary/Robotics/tree/ekf_lab) uses EKF ROS package to localize Chakra inside of the chakraWorld
+3. [MCL](https://github.com/schandrachary/Robotics/tree/mcl_lab) uses particle filter based approach to localize the robot
+4. [Where Am I](https://github.com/schandrachary/Robotics/tree/where_am_i) uses a flavor of MCL called Adaptive Monte Carlo localization which can recover from [kidnapped robot problem](https://en.wikipedia.org/wiki/Kidnapped_robot_problem) in a very few iterations. 
+5. [Occupancy Grid Mapping](https://github.com/schandrachary/Robotics/tree/occupancy_grid_mapping) uses an inverse sensor model to create a map of the world
+6. [Map My World](https://github.com/schandrachary/Robotics/tree/map_my_world) uses an appearance based RTAB-Mapping technique to map the chakarWorld. Read more about RTAB-Mapping [here](https://shivachandrachary.medium.com/introduction-to-3d-slam-with-rtab-map-8df39da2d293) and about GraphSLAM [here](https://shivachandrachary.medium.com/a-brief-introduction-to-graphslam-4204b4fce2f0)
+7. [A star](https://github.com/schandrachary/Robotics/tree/path_planning_a_star) is a popular path planning algorithm that finds a shortest path from source to destination for holonomic systems
+8. [Home Service Robot](https://github.com/schandrachary/Robotics/tree/home_service_robot) uses all the techniques that are seen above to safely navigate the robot from a start location to pick up an object. And then drop off that object at another desired location. It uses AMCL to localize the robot, RTAB-Mapping to map its environment and Dijkstra's Algorithm to perform navigation. 
